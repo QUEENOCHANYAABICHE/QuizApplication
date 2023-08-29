@@ -3,7 +3,9 @@ package com.example.springbootpriject.CONTROLLER;
 
 import com.example.springbootpriject.MODELS.Question;
 import com.example.springbootpriject.SERVICE.QuestionService;
-;import org.springframework.beans.factory.annotation.Autowired;
+;import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,11 +13,12 @@ import java.util.List;
 
 //using it cause this is where we want to accept request
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("question")
 public class QuestionController {
 
     //declare questionService to make us make ref to it
-    @Autowired
+
     QuestionService questionService;
 
     //this maps http reguest for allQuestions to this mthd

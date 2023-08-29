@@ -13,6 +13,7 @@ import java.util.List;
 
 @Service
 public class QuestionService {
+
     @Autowired
     QuestionDAO questionDAO;
     public ResponseEntity<List<Question>> getAllQuestions() {

@@ -38,7 +38,7 @@ List<Question> questions = (List<Question>) questionDAO.findRandomQuestionsByCat
  }
 
     public ResponseEntity<List<QuestionWrapper>> getQuizQuestions(Integer id) {
-       Optional quiz = quizDAO.findById(id);
+       Optional<Quiz> quiz = quizDAO.findById(id);
        List<Question> questionsFromDB = quiz.get().getQuestions();
        List<QuestionWrapper> questionsForUser = new ArrayList<>();
        for(Question q: questionsFromDB){

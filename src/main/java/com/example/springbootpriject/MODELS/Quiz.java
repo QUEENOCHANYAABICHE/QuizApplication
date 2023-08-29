@@ -1,6 +1,7 @@
 package com.example.springbootpriject.MODELS;
 
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Data;
 import org.hibernate.annotations.ManyToAny;
 
@@ -12,7 +13,6 @@ public class Quiz {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Integer id;
     private String title;
-
     @ManyToMany
     private List<Question> questions;
 
